@@ -1,0 +1,128 @@
+:root {
+    --clr-primary-400: hsl(158, 36%, 37%);
+    --clr-secondary-200: hsl(30, 38%, 92%);
+
+    --clr-neutral-900: hsl(212, 21%, 14%);
+    --clr-neutral-400: hsl(228, 12%, 48%);
+    --clr-neutral-200: hsl(0, 0%, 100%);
+
+    --ff-accent: 'Fraunces', serif;
+    --ff-base: 'Montserrat', sans-serif;
+
+    --fw-regular: 500;
+    --fw-bold: 700;
+}
+
+/* style reseting */
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+img, picture, video, svg, canvas {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+/* general styling */
+body {
+    font-family: var(--ff-base);
+    font-weight: var(--fw-regular);
+    font-size: 0.875rem;
+    background-color: var(--clr-secondary-200);
+    color: var(--clr-neutral-400);
+
+    display: grid;
+    place-content: center;
+    padding: 1rem;
+}
+
+/* utilities */
+.flex-group {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+/* product card design */
+.product {
+    background-color: var(--clr-neutral-200);
+    border-radius: 10px;
+    overflow: hidden;
+    max-width: 600px;
+    display: grid;
+}
+
+@media (min-width: 600px) {
+    .product {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+p {
+    line-height: 1.8;
+}
+
+.product__details {
+    padding: 25px;
+    display: grid;
+    gap: 0.5rem;
+}
+
+.product__category {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.product__title {
+    font-family: var(--ff-accent);
+    font-weight: var(--fw-bold);
+    color: var(--clr-neutral-900);
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.product__price {
+    font-family: var(--ff-accent);
+    font-weight: var(--fw-bold);
+    color: var(--clr-primary-400);
+    font-size: 2rem;
+}
+
+.button {
+    display: inline-flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: var(--clr-primary-400);
+    color: var(--clr-neutral-200);
+    font-weight: var(--fw-bold);
+    border: none;
+    border-radius: 10px;
+    text-decoration: done;
+    width: 100%;
+    padding: 15px 30px;
+    transition-duration: 0.9ms;
+}
+
+.button[data-icon="cart"]::before {
+    content: '';
+    background-image: url("/images/icon-cart.svg");
+    width: 15px;
+    height: 16px;
+}
+
+.button:hover {
+    background-color: hsl(158, 36%,30%);;
+}
