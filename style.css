@@ -44,7 +44,6 @@ body {
     width: 100vw;
     display: grid;
     place-content: center;
-    padding: 1rem;
 }
 
 /* utilities */
@@ -62,6 +61,7 @@ body {
     overflow: hidden;
     max-width: 600px;
     display: grid;
+    margin-inline: 1rem;
 }
 
 @media (min-width: 600px) {
@@ -75,7 +75,7 @@ p {
 }
 
 .product__details {
-    padding: 25px;
+    padding: 2rem;
     display: grid;
     gap: 0.5rem;
 }
